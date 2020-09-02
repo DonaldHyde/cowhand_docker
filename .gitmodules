@@ -1,0 +1,6 @@
+[submodule "cowhand_api"]
+	path = cowhand_api
+	url = https://github.com/DonaldHyde/cowhand_api.git
+[submodule "cowhand_front-end"]
+	path = cowhand_front-end
+	url = https://github.com/DonaldHyde/cowhand_front-end.git

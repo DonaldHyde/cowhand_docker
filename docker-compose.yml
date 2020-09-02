@@ -2,16 +2,17 @@ version: '3'
 
 services:
   api:
-    build: ./api
-    container_name: cowhand-api
+    build: ./cowhand_api
+    container_name: cowhand_api
     ports:
       - '5000:5000'
     depends_on:
       - mongo
 
   web-app:
-    build: ./web-app
-    container_name: cowhand-web-app
+    build: ./cowhand_front-end
+    container_name: cowhand_front-end
+    stdin_open: true
     ports:
       - '3000:3000'
     depends_on:
@@ -19,7 +20,7 @@ services:
 
   mongo:
     image: 'mongo'
-    container_name: cowhand-mongo-db
+    container_name: cowhand_mongo-db
     restart: always
     ports:
       - '27017:27017'
@@ -27,7 +28,7 @@ services:
   mongo-express:
     image: mongo-express
     restart: always
-    container_name: cowhand-mongo-express
+    container_name: cowhand_mongo-express
     ports:
       - 8081:8081
     #     volumes:

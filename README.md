@@ -1,2 +1,3 @@
-# cowhand_docker
-Docker compose for cowhand.io
+# Cowhand.io
+
+docker-compose build
